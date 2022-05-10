@@ -1,7 +1,7 @@
-const module=require("../app/statistics");
-const getStatistics=module.getStatistics;
-const EmailAlert=module.EmailAlert;
-const LEDAlert==module.LEDAlert;
+const statmodule=require("../app/statistics");
+const getStatistics=statmodule.getStatistics;
+const EmailAlert=statmodule.EmailAlert;
+const LEDAlert==statmodule.LEDAlert;
 
 describe("StatisticsTest",function(){
     it("reportsAverageMinMaxx",function(){
