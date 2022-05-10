@@ -1,4 +1,5 @@
 module.exports= class StatsAlerter{
+     
      maxThreshold=0;
      alerters=[];
      constructor(maxThreshold,alerters){
