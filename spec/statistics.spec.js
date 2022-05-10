@@ -1,5 +1,4 @@
-const statmodule=require("../app/statistics");
-const statmodule=require("../app/statsalert");
+const getStatistics=require("../app/statistics");
 const EmailAlert=require("../app/email");
 const LEDAlert==require("../app/led");
 
