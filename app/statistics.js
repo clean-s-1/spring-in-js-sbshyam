@@ -7,17 +7,22 @@ module.exports=function getStatistics(numbers){
     stats.average=stats.average/numbers.length;
     stats.min=Math.min(...numbers);
     stats.max=Math.max(...numbers);
-     class EmailAlert{
+
+
+    return stats;
+    //implement the computation of statistics here
+}
+  module.exports.EmailAlert=   class EmailAlert{
      emailSent=false;
      constructor(){
      }
  }
- class LEDAlert{
+module.exports.LEDAlert= class LEDAlert{
      ledGlows=false;
      constructor(){
      }
  }
- class StatsAlerter{
+module.exports.StatsAlerter= class StatsAlerter{
      maxThreshold=0;
      alerters=[];
      constructor(maxThreshold,alerters){
@@ -32,7 +37,3 @@ module.exports=function getStatistics(numbers){
          }
      }
  }
-    return stats;
-    //implement the computation of statistics here
-}
-
