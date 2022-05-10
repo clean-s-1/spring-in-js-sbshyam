@@ -18,11 +18,9 @@ describe("StatisticsTest",function(){
     it("reportsNaNForEmptyInput",function(){
         const numbers=[];
         const stats=getStatistics(numbers);
-        // All fields of computedStats (average, max, min) must be
-        // NAN (not-a-number)
-        // Design the expect statement here.
-        // Use https://www.w3schools.com/jsref/jsref_isnan.asp
-        
+        expect(isNaN(stats.average)).toBe(true);
+        expect(isNaN(stats.max)).toBe(true);
+        expect(isNaN(stats.min)).toBe(true);
     })
     it("raises alerts when max is greater than threshold",function(){
          const emailAlert=new EmailAlert();
