@@ -1,4 +1,7 @@
 const getStatistics=require("../app/statistics");
+const EmailAlert=require("../app/EmailAlert");
+const LEDAlert=require("../app/LEDAlert");
+
 describe("StatisticsTest",function(){
     it("reportsAverageMinMaxx",function(){
         const r1 = 1.5;
