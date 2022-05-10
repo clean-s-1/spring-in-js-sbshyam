@@ -11,4 +11,28 @@ module.exports=function getStatistics(numbers){
     return stats;
     //implement the computation of statistics here
 }
-
+ class EmailAlert{
+     emailSent=false;
+     constructor(){
+     }
+ }
+ class LEDAlert{
+     ledGlows=false;
+     constructor(){
+     }
+ }
+ class StatsAlerter{
+     maxThreshold=0;
+     alerters=[];
+     constructor(maxThreshold,alerters){
+        this.maxThreshold=maxThreshold;
+        this.alerters=alerters;
+     }
+     checkAndAlert(nums){
+         var maxi= Math.max(...nums);
+         if(this.maxThreshold>maxi){
+            this.alerters[0].emailSent=true;
+            this.alerters[1].ledGlows=true;
+         }
+     }
+ }
